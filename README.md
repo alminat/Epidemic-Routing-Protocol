@@ -92,9 +92,9 @@ Simulacija je provedena na modelu DTN mreže sa **50 mobilnih čvorova** u prost
 | 4.2 – Čvorovi + Bafer | nWifis=30, queueLength=3000 | 37.8% | 62.2% |
 | 4.3 – Čvorovi + Hop Count | nWifis=30, hopCount=65 | **39.0%** | **61.0%** |
 
-![Podscenarij 4.1](grafici/IV-scenariji/scenarij4_1_queue_hop.png)
-![Podscenarij 4.2](grafici/IV-scenariji/scenarij4_2_nodes_queue.png)
-![Podscenarij 4.3](grafici/IV-scenariji/scenarij4_3_nodes_hop.png)
+![Podscenarij 4.1](grafici/IV-scenariji/4.1.jpg)
+![Podscenarij 4.2](grafici/IV-scenariji/4.2.jpg)
+![Podscenarij 4.3](grafici/IV-scenariji/4.3.jpg)
 
 ---
 
