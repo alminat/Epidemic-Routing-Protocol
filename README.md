@@ -18,10 +18,35 @@ Projekt se sastoji od dva dijela:
 Epidemic-Routing-Protocol/
 │
 ├── scenariji/
-│   ├── prvi_scen.csv               # Scenarij 1 – Uticaj veličine bafera (Queue Length)
-│   ├── scenarij2_hopcount.csv      # Scenarij 2 – Uticaj broja skokova (Hop Count)
-│   ├── treci_scenarij_broj_cvorova.csv  # Scenarij 3 – Uticaj broja čvorova
-│   └── manual_results.csv          # Scenarij 4 – Kombinovani uticaj parametara
+│   ├── prvi_scen.csv
+│   ├── scenarij2_hopcount.csv
+│   ├── treci_scenarij_broj_cvorova.csv
+│   └── manual_results.csv
+│
+├── kod/
+│   ├── I-scenariji/
+│   │   └── scenarij1_queue_length.py
+│   ├── II-scenariji/
+│   │   └── scenarij2_hopcount.py
+│   ├── III-scenariji/
+│   │   └── scenarij3_broj_cvorova.py
+│   └── IV-scenariji/
+│       └── scenarij4_svi.py
+│
+├── grafici/
+│   ├── I-scenariji/
+│   │   └── scenarij1_queue_length.png
+│   ├── II-scenariji/
+│   │   └── scenarij2_hopcount.png
+│   ├── III-scenariji/
+│   │   └── scenarij3_broj_cvorova.png
+│   └── IV-scenariji/
+│       ├── scenarij4_1_queue_hop.png
+│       ├── scenarij4_2_nodes_queue.png
+│       └── scenarij4_3_nodes_hop.png
+│
+├── izvjestaji/
+│   └── KUTM.pdf
 │
 └── README.md
 ```
@@ -33,23 +58,43 @@ Epidemic-Routing-Protocol/
 Simulacija je provedena na modelu DTN mreže sa **50 mobilnih čvorova** u prostoru dimenzija 1500 m × 300 m, uz korištenje Random Waypoint modela mobilnosti.
 
 ### Scenarij 1 – Uticaj veličine bafera (Queue Length)
+
 - Parametar `queueLength` mijenjan u opsegu od 0 do 2000 paketa
 - **Najbolji rezultat:** Delivery Ratio = **32.4%** pri `queueLength = 1200`
 
+![Scenarij 1](grafici/I-scenariji/scenarij1_queue_length.png)
+
+---
+
 ### Scenarij 2 – Uticaj broja skokova (Hop Count)
+
 - Parametar `hopCount` mijenjan u opsegu od 1 do 50
 - **Najbolji rezultat:** Delivery Ratio = **30.0%** pri `hopCount = 29`
 
+![Scenarij 2](grafici/II-scenariji/scenarij2_hopcount.png)
+
+---
+
 ### Scenarij 3 – Uticaj broja čvorova
+
 - Parametar `nWifis` mijenjan u opsegu od 5 do 100 čvorova
 - **Najbolji rezultat:** Delivery Ratio = **27.8%** pri `nWifis = 45`
 
+![Scenarij 3](grafici/III-scenariji/scenarij3_broj_cvorova.png)
+
+---
+
 ### Scenarij 4 – Kombinovani uticaj parametara
+
 | Podscenarij | Optimalni parametri | Max Delivery Ratio | Min Packet Loss |
 |---|---|---|---|
 | 4.1 – Bafer + Hop Count | queueLength=1000, hopCount=200 | 26.6% | 73.4% |
 | 4.2 – Čvorovi + Bafer | nWifis=30, queueLength=3000 | 37.8% | 62.2% |
 | 4.3 – Čvorovi + Hop Count | nWifis=30, hopCount=65 | **39.0%** | **61.0%** |
+
+![Podscenarij 4.1](grafici/IV-scenariji/scenarij4_1_queue_hop.png)
+![Podscenarij 4.2](grafici/IV-scenariji/scenarij4_2_nodes_queue.png)
+![Podscenarij 4.3](grafici/IV-scenariji/scenarij4_3_nodes_hop.png)
 
 ---
 
@@ -60,6 +105,12 @@ Simulacija je provedena na modelu DTN mreže sa **50 mobilnih čvorova** u prost
 - Kombinovana optimizacija više parametara daje bolje rezultate od optimizacije jednog parametra
 - **Packet loss** u svim scenarijima ostaje iznad 60%, što je karakteristika Epidemic Routing protokola zbog intenzivnog "plavljenja" (flooding overhead)
 - Rezultati su konzistentni s teorijskim SI modelom širenja poruka
+
+---
+
+## 📄 Dokumentacija
+
+- [Teorijski izvještaj](izvjestaji/KUTM.pdf)
 
 ---
 
