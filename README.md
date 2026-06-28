@@ -26,6 +26,18 @@ Implementirane izmjene uključuju:
 
 **`epidemic-benchmark.cc`** korišten je za odabir i pokretanje odgovarajućih benchmark scenarija (`queue-length`, `hop-count`, `node-count` i `manual`), dok su pojedinačne implementacije benchmarka smještene u direktoriju **`benchmark/`**. Dodatno, izvršene su izmjene u implementaciji protokola radi prikupljanja statističkih podataka, generisanja rezultata u CSV formatu i omogućavanja detaljne analize performansi kroz pripadajuće skripte i grafičke prikaze.
 
+## Video demonstracije
+Za potrebe projekta pripremljene su i video demonstracije koje prikazuju praktičan rad implementiranih scenarija.
+
+Video zapisi obuhvataju:
+
+- pokretanje benchmark scenarija u NS-3 okruženju,
+- izvršavanje simulacija Epidemic Routing protokola,
+- analizu razmjene paketa pomoću Wireshark alata,
+- prikaz komunikacije između čvorova i potvrdu ispravnog rada implementiranih modifikacija.
+
+Video demonstracije su dostupne putem Google Drive linka: (https://drive.google.com/drive/folders/1EWF6363NiKQEyDqYXPwJnRzYqo-RHR73?usp=sharing)
+
 
 ## 📁 Struktura repozitorijuma
 
