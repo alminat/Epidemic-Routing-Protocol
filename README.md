@@ -7,6 +7,8 @@
 
 Ovaj projekat istražuje performanse **Epidemic Routing protokola** u mrežama otpornim na kašnjenje (Delay-Tolerant Networks – DTN). Epidemic routing jedan je od prvih i najznačajnijih algoritama baziranih na replikaciji podataka, koji koristi **Store-Carry-Forward** mehanizam za prenos poruka u okruženjima bez stalne mrežne povezanosti.
 
+Projekt je razvijen na osnovu postojeće implementacije Epidemic Routing Protocol za ns-3, dostupne na GitHub repozitoriju: https://github.com/Herbrant/epidemic-ns3. Izvorna implementacija korištena je kao polazna osnova, dok su u okviru ovog projekta izvršene dodatne izmjene i proširenja radi implementacije novih benchmark scenarija, prikupljanja statističkih podataka i analize performansi protokola.
+
 Projekt se sastoji od dva dijela:
 - **Teorijski dio** – analiza arhitekture DTN mreža, principa rada Epidemic protokola i poređenje sa srodnim protokolima (Spray and Wait, PRoPHET)
 - **Praktični dio** – implementacija i simulacija u NS-3 okruženju kroz više scenarija
