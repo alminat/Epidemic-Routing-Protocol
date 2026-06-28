@@ -111,6 +111,7 @@ Simulacija je provedena na modelu DTN mreže sa **50 mobilnih čvorova** u prost
 ## 📄 Dokumentacija
 
 - [Teorijski izvještaj](izvjestaji/KUTM.pdf)
+- [Praktični izvještaj](izvjestaji/KUTM_prakticni_dio.pdf)
 
 ---
 
