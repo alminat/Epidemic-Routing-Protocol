@@ -11,6 +11,19 @@ Projekt se sastoji od dva dijela:
 - **Teorijski dio** – analiza arhitekture DTN mreža, principa rada Epidemic protokola i poređenje sa srodnim protokolima (Spray and Wait, PRoPHET)
 - **Praktični dio** – implementacija i simulacija u NS-3 okruženju kroz više scenarija
 
+### Modifikacije implementirane u `epidemic-ns3`
+
+U okviru ovog projekta izvršene su izmjene nad izvornom implementacijom Epidemic Routing protokola za ns-3. Glavni dio implementacije nalazi se u datoteci **`epidemic-benchmark.cc`**, koja predstavlja ulaznu tačku za pokretanje svih benchmark scenarija. Iz ove datoteke vršeno je pokretanje i konfiguracija svih eksperimenata korištenih u projektu.
+
+Implementirane izmjene uključuju:
+
+* **Queue Length Benchmark** – analiza uticaja veličine reda čekanja (`queueLength`) na isporuku poruka, mrežni overhead i kašnjenje.
+* **Hop Count Benchmark** – analiza uticaja maksimalnog broja skokova (`hopCount`) na performanse protokola.
+* **Node Count Benchmark** – analiza uticaja broja čvorova (`nWifis`) na uspješnost isporuke poruka i opterećenje mreže.
+* **Manual Benchmark** – kombinovani scenariji za ispitivanje međusobnog uticaja više parametara (broj čvorova, veličina reda čekanja i maksimalni broj skokova).
+
+**`epidemic-benchmark.cc`** korišten je za odabir i pokretanje odgovarajućih benchmark scenarija (`queue-length`, `hop-count`, `node-count` i `manual`), dok su pojedinačne implementacije benchmarka smještene u direktoriju **`benchmark/`**. Dodatno, izvršene su izmjene u implementaciji protokola radi prikupljanja statističkih podataka, generisanja rezultata u CSV formatu i omogućavanja detaljne analize performansi kroz pripadajuće skripte i grafičke prikaze.
+
 
 ## 📁 Struktura repozitorijuma
 
